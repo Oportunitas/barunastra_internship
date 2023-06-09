@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Sawarabi+Gothic&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --navbar-width: 20vw;
+  --background-color: hsla(220deg, 95%, 10%, 100%);
+  --background-color-light: hsla(210deg, 70%, 30%, 100%);
+  --background-color-dark: hsla(220deg,40%, 5%, 100%);
+  --font-color-light: hsla(0deg, 0%, 100%, 90%);
+  --font-color-dark: hsla(0deg, 0%, 100%, 60%);
+  --font-color: hsla(0deg, 0%, 100%, 75%);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: calc(max(min(2vw, 20px), 10px));
+  background-color: var(--background-color);
+}
+
+#navigation {
+  width: var(--navbar-width);
+  margin: 0;
+  border: 2px solid black;
+  text-align: center;
+  display: block;
+  height: 100%;
+}
+
+#nav-header {
+  display: flex;
+  color: var(--font-color);
+  font-size: 1.25em;
+  font-family: Montserrat;
+  font-weight: 800;
+  margin: 1.5em 0 0 0;
+}
+
+.nav-link {
+  display: block;
+  font-family: Montserrat;
+  font-weight: 600;
+  margin: 2em 0 2em 0;
+  /* added by robin */
+  text-decoration: none;
+  color: black;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  width: inherit;
+  height: 4em;
+  z-index: 999;
+  border: 0px solid black;
+  background: linear-gradient(180deg, hsla(250deg, 0%, 0%, 100%), transparent);
+  mix-blend-mode: normal;
+}
+
+#navbar > a {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1.25em;
+  color: var(--font-color-dark);
+  text-decoration: none;
+  margin-top: 0.95em;
+}
+
+#oportunitas-watermark {
+  text-align: center;
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 1.25em;
+  color: hsla(30deg, 100%, 100%, 80%);
+}
+
+main {
+  width: 100vw;
+}
+
+#welcome-section {
+  color: var(--font-color);
+  height: inherit;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: Montserrat;
+  font-size: 4em;
+  text-align: center;
+  margin: 2.25em 0 0 0;
+}
+
+h2 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 2em;
+  text-align: center;
+  margin: 0 0 0 0;
+}
+
+h3 {
+  font-family: "Roboto Mono";
+  font-weight: 700;
+  font-size: 2.3em;
+  text-align: center;
+  margin: 1em 0 0 0;
+}
+
+#i-am-a {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#i-am-a * {
+  font-size: 1.35em;
+  margin: 0 0.10em 0 0.10em;
+}
+
+#i-am-a > .title {
+  font-size: 2em;
+}
+
+#i-am-a > p {
+  font-family: Montserrat;
+  font-weight: 300;
+}
+
+#job-programmer {
+  font-family: "Roboto Mono";
+  font-weight: 500;
+  font-size: 1.08em;
+}
+
+#job-cinematographer {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 1.08em;
+}
+
+#job-illustrator {
+  font-family: "Sawarabi Gothic";
+  font-weight: 500;
+  font-size: 1.05em;
+}
+
+#job-content-creator {
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 1.07em;
+}
+
+#job-web-designer {
+  font-family: "Work Sans";
+  font-weight: 500;
+  font-size: 1.05em;
+  letter-spacing: 0.15em;
+}
+
+#job-learner {
+  font-family: "Lexend";
+  font-weight: 400;
+  font-size: 1em;
+}
+
+@keyframes slide-option-job-slide {
+  0% {
+    transform: translateY(calc(0%));
+  }
+  10% {
+    transform: translateY(calc(-19%));
+  }
+  20% {
+    transform: translateY(calc(-37%));
+  }
+  30% {
+    transform: translateY(calc(-54%));
+  }
+  40% {
+    transform: translateY(calc(-69.5%));
+  }
+  50% {
+    transform: translateY(calc(-85%));
+  }
+  60% {
+    transform: translateY(calc(-69.5%));
+  }
+  70% {
+    transform: translateY(calc(-54%));
+  }
+  80% {
+    transform: translateY(calc(-37%));
+  }
+  90% {
+    transform: translateY(calc(-19%));
+  }
+  100% {
+    transform: translateY(calc(0%));
+  }
+}
+
+.job-slide {
+  animation-name: slide-option-job-slide;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.job-slide-frame {
+  overflow: hidden;
+  position: relative;
+  height: 2em;
+  transform: translateY(0px);
+}
+
+#about-me {
+  color: var(--font-color);
+  padding: 2em 5em 5em 5em;
+  background: linear-gradient(white 1%, var(--background-color-light) 1%, var(--background-color-dark));
+}
+
+#about-me > header {
+  font-family: "Work Sans";
+  font-weight: 600;
+  text-align: center;
+  font-size: 3em;
+  color: var(--font-color-light);
+  margin-top: 1em;
+}
+
+blockquote {
+  text-align: center;
+  margin-top: 2em;
+  font-family: Montserrat;
+}
+
+.main-quote {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.quote-translation {
+  font-size: 1.25em;
+  font-style: italic;
+  margin-top: 0;
+}
+
+.essay {
+  font-family: "Work Sans";
+  text-align: justify;
+  font-size: 1.25em;
+}
+
+#projects {
+  padding: 0.4em 2em 2em 2em;
+  height: inherit;
+  background: linear-gradient(var(--background-color-dark), var(--background-color));
+}
+
+#projects > header {
+  font-family: "Work Sans";
+  font-weight: 600;
+  text-align: center;
+  font-size: 3em;
+  color: var(--font-color-light);
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+#projects > a {
+  font-family: "Work Sans";
+  font-weight: 500;
+  display: block;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.5em;
+  color: var(--font-color-light);
+  margin-bottom: 1em;
+}
+
+.website-project {
+  border: 5px solid white;
+  border-radius: 1em;
+  margin: 1em auto;
+  width: 80%;
+  height: 30em;
+  transition: width 0.75s, height 0.75s;
+  background-color: hsla(180deg, 70%, 30%, 50%);
+}
+
+.project-title {
+  font-family: "Work Sans";
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+  margin: 0.5em;
+  color: var(--font-color);
+}
+
+.codepen-embed {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: calc(100% - 5em);
+  width: calc(100% - 1.3em);
+  margin: 0 auto 1rem;
+  border-radius: 0.75em;
+}
+
+.website-project:hover {
+  height: 80vh;
+  width: 80vw;
+}
+
+#connect {
+  color: var(--font-color);
+  padding: 2em 5em 2em 5em;
+  background: linear-gradient(var(--background-color), var(--background-color-light) 97%, white 99%);
+}
+
+#connect > header {
+  font-family: "Work Sans";
+  font-weight: 600;
+  text-align: center;
+  font-size: 3em;
+  color: var(--font-color-light);
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+#profile-link {
+  font-family: "Work Sans";
+  font-weight: 600;
+  font-size: 1.5em;
+  color: var(--font-color);
+  text-decoration: none;
+  transition: font-size 0.75s;
+  margin-bottom: 1em;
+}
+
+#profile-link:hover {
+  font-size: 2em;
+}
+
+#links {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 720px) {
+  #links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1.5em;
+    width: 90%;
+    text-align: center;
+    margin: 3em 1em 1em 1em;
+  }
+}
